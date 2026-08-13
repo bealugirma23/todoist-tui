@@ -1,0 +1,39 @@
+*todoist-tui.txt*       A Neovim plugin for Todoist
+
+CONTENTS                                          *todoist-tui-contents*
+
+1. Intro                                          |todoist-tui-intro|
+2. Commands                                       |todoist-tui-commands|
+3. Configuration                                  |todoist-tui-configuration|
+
+==============================================================================
+1. Intro                                             *todoist-tui-intro*
+
+todoist-tui.nvim is a floating-panel terminal user interface for managing
+your Todoist tasks without leaving Neovim.
+
+==============================================================================
+2. Commands                                       *todoist-tui-commands*
+
+:Todoist                                          *:Todoist*
+    Toggle the Todoist TUI panels. Opens the TUI if closed, closes it if open.
+
+:TodoistSync                                      *:TodoistSync*
+    Force a full sync with the Todoist API.
+
+==============================================================================
+3. Configuration                                  *todoist-tui-configuration*
+
+To configure, pass a table to the setup function.
+
+>lua
+    require("todoist-tui").setup({
+      token = nil, -- Uses TODOIST_API_TOKEN environment variable by default
+      token_env = "TODOIST_API_TOKEN",
+      -- ... other defaults ...
+    })
+<
+
+Check |health-todoist-tui| to verify your configuration.
+
+vim:tw=78:ts=8:ft=help
